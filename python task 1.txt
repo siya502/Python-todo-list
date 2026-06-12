@@ -1,0 +1,40 @@
+tasks = []
+
+while True:
+
+    print("\n~~~~~~~~ TO DO LIST ~~~~~~~~")
+    print("A. Add Task")
+    print("B. Show Tasks")
+    print("C. Exit")
+
+    choice = input("Choose an option: ")
+
+    if choice == "A":
+
+        task = input("Enter task: ")
+        tasks.append(task)
+
+        print("Task added successfully!")
+
+    elif choice == "B":
+
+        if len(tasks) == 0:
+            print("No tasks available.")
+
+        else:
+            print("\nYour Tasks:")
+
+            count = 1
+
+            for task in tasks:
+                print(count, "-", task)
+                count += 1
+
+    elif choice == "C":
+
+        print("Thank You!")
+        break
+
+    else:
+
+        print("Invalid Choice")
